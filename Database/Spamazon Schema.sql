@@ -8,6 +8,7 @@ create table book
 	 title		varchar(255),
 	 price		decimal(10,2),
 	 subject	varchar(255),
+	 ageGroup	varchar(255),
 	 publishDate DATE,
 	 primary key (bookNo)
 	);
@@ -32,11 +33,30 @@ create table users
 	 paymentInfo		varchar(255), 	 
 	 primary key (email)
 	);
+create table admin
+	(email		varchar(255), 
+	 password		varchar(255), 	 
+	 primary key (email)
+	);
 create table cart
 	(bookNo		varchar(15), 
 	 email		varchar(255), 	 
 	 primary key (email,bookNo),
 	 foreign key (bookNo) references book(bookNo),
 	 foreign key (email) references users(email)
+	);	
+	
+create table wishlist
+	(bookNo		varchar(15), 
+	 email		varchar(255), 	 
+	 primary key (email,bookNo),
+	 foreign key (bookNo) references book(bookNo),
+	 foreign key (email) references users(email)
 	);		
-
+create table purchase
+	(bookNo		varchar(15), 
+	 email		varchar(255), 	 
+	 primary key (email,bookNo),
+	 foreign key (bookNo) references book(bookNo),
+	 foreign key (email) references users(email)
+	);		
