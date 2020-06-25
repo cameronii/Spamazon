@@ -6,7 +6,7 @@ word_url = "http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type
 response = urllib.request.urlopen(word_url)
 long_txt = response.read().decode()
 WORDS = long_txt.splitlines()
-
+WORDS=[word for word in WORDS if not "'" in word]
 upper_words = [word for word in WORDS if word[0].isupper()]
 name_words  = [word for word in upper_words if not word.isupper()]
 
@@ -18,13 +18,14 @@ days_between_dates = time_between_dates.days
 price=['1.99','2.50','2.99','4.99','9.99','14.99','19.99','24.49','29.75','40.00','44.95','60.00','129.95','253.14','322.65']
 joiner=[' of the ',' in ',' for ',' ',' of ',' and ']
 subject=['Math','Cooking','Science','Adventure','History','Art','Romance','Computers','Sci-fi','Comedy']
+agegroup=['3-8','5-9','7-10','8-12','14 and up','Young adult','Adult']
 bookcount=2000
 for i in range(1000,bookcount,1):
     random_number_of_days = random.randrange(days_between_dates)
     random_date = start_date + datetime.timedelta(days=random_number_of_days)
-    print("insert into book values ('{}', '{}{}{}',{},'{}','{}');".format(
+    print("insert into book values ('{}', '{}{}{}',{},'{}','{}','{}');".format(
         str(i),random.choice(WORDS).capitalize(),random.choice(joiner),
-        random.choice(WORDS).capitalize(),random.choice(price),random.choice(subject),random_date))
+        random.choice(WORDS).capitalize(),random.choice(price),random.choice(subject),random_date,random.choice(agegroup)))
 
 for j in range(10000,10100,1):
     rand_name   = ' '.join([random.choice(name_words) for i in range(2)])

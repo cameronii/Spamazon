@@ -8,8 +8,8 @@ create table book
 	 title		varchar(255),
 	 price		decimal(10,2),
 	 subject	varchar(255),
-	 ageGroup	varchar(255),
 	 publishDate DATE,
+	 ageGroup	varchar(255),
 	 primary key (bookNo)
 	);
 create table author
