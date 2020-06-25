@@ -25,7 +25,7 @@ echo"Results";
 $query = mysqli_query($dbconnect, "(SELECT book.bookNo,book.title, author.authorNo,author.authorName, book.price FROM book 
 									INNER JOIN wroteBy ON wroteBy.bookNo=book.bookNo
 									INNER JOIN author ON author.authorNo=wroteBy.authorNo
-									WHERE book.title LIKE '%$search%')
+									WHERE book.title LIKE '%$search%' OR book.subject LIKE '%$search%')
 
 									UNION
 
