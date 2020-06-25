@@ -6,7 +6,7 @@ delete from wroteBy;
 delete from users;
 delete from admin;
 
-insert into users values ('test@test.test','Firstname Lastname','123 Test Street','password','Fake credit card here');
+insert into users values ('test@test.test','Firstname Lastname','123 Test Street','password','1234 5678 1234 5678');
 
 insert into admin values ('admin@spamazon.com','admin');
 

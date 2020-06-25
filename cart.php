@@ -30,11 +30,12 @@ while ($row = mysqli_fetch_array($query)) {
    "<tr>
     <td><a href='book.php?ID={$row['bookNo']}'>{$row['title']}</td>
     <td>\${$row['price']}</td>
-	<td><a href='delete.php?ID={$row['bookNo']}'></a>remove</td>
+	<td><a href='delete.php?ID={$row['bookNo']}'>remove</td>
    </tr>\n";
 
 }
 ?>
+<tr><td colspan=3><a href='purchase.php'><h3>Purchase</h3></td>
 <!-- Mark you said you might want to work on shopping cart, I just made a file so my link in header would go somewhere -->
 </body>
 </html>
