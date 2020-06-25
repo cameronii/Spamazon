@@ -4,7 +4,12 @@ delete from book;
 delete from author;
 delete from wroteBy;
 delete from users;
+delete from admin;
+
 insert into users values ('test@test.test','test','123 Test Street','password','Fake credit card here');
+
+insert into admin values ('admin@spamazon.com','admin');
+
 insert into book values ('1000', 'Brushy of the Abet',2.50,'Computers','2018-03-27');
 insert into book values ('1001', 'Epidermic in Peugeot',24.49,'Adventure','2007-09-05');
 insert into book values ('1002', 'Borg of Perky',24.49,'Romance','2014-01-02');
