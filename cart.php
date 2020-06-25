@@ -15,15 +15,15 @@
 INNER JOIN book ON book.bookNo=cart.bookNo
 WHERE email='{$_SESSION['email']}' ")
        or die (mysqli_error($dbconnect));
-    $cartcontents=mysqli_fetch_array($query);
 	?>
 	<h1>Cart Contents</h1>
 <?php
-while ($cartcontents = mysqli_fetch_array($query)) {
+while ($row = mysqli_fetch_array($query)) {
   echo
    "<tr>
     <td><a href='book.php?ID={$row['bookNo']}'>{$row['title']}</td>
     <td>\${$row['price']}</td>
+	<td><a href='delete.php?id={$row['bookNo']}.&email={$_SESSION['email']}'></a>remove</td>
    </tr>\n";
 
 }
