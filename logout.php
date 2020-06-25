@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Spamazon Account</title>
+<title>Logout</title>
 <link rel="stylesheet" type="text/css" href="css/spamstyle.css">
 </head>
 <body>

@@ -40,3 +40,10 @@ create table cart
 	 foreign key (email) references users(email)
 	);		
 
+create table tickets
+	(email		varchar(255),
+	 details	varchar(255),
+	 date		DATE,
+	 primary key (email, details),
+	 foreign key (email) references users(email)
+	);
