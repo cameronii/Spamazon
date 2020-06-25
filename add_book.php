@@ -7,9 +7,9 @@
 </head>
 <body>
 <?php
-
-    include('process_add_book.php');
+    
     include_once('Header.php');
+    include('process_add_book.php');
     
 ?>
 

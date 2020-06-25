@@ -10,9 +10,14 @@
     if(mysqli_num_rows($res_e) == 0){
         $bookNo_error = "That bookNo does not exist in the database";
     }else{
-        $query = "DELETE FROM book WHERE bookNo={$bookNo}";
-        $results = mysqli_query($dbconnect, $query);
-        echo "<h1>Success!</h1>";
+        $sql = "DELETE FROM wroteBy WHERE bookNo={$bookNo};";
+        $sql .= "DELETE FROM book WHERE bookNo={$bookNo};";
+
+        if ($dbconnect->multi_query($sql) === TRUE) {
+          echo "<h1>Success!</h1>";
+        } else {
+          echo "Error: " . $sql . "<br>" . $dbconnect->error;
+        }
         exit();
       }
   }
