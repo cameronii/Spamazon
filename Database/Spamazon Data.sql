@@ -886,7 +886,6 @@ insert into book values ('1872', 'Claimant of the Rushmore',24.49,'Adventure','2
 insert into book values ('1873', 'Cometary and Organometallic',60.00,'Science','2004-12-26','8-12');
 insert into book values ('1874', 'Paragonite and New',24.49,'Romance','2017-07-07','7-10');
 insert into book values ('1875', 'Heterogeneous of Tang',29.75,'Adventure','2009-01-07','8-12');
-insert into book values ('1876', 'Nigger and Reflexive',14.99,'Cooking','2000-06-18','3-8');
 insert into book values ('1877', 'Lechery in Cetera',2.99,'History','2012-08-27','8-12');
 insert into book values ('1878', 'Pardon for Scruffy',44.95,'Art','2016-06-01','Adult');
 insert into book values ('1879', 'Ankara for Jetliner',14.99,'Computers','2015-06-25','7-10');
