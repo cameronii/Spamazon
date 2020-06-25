@@ -27,6 +27,7 @@ echo "<h1>{$bookInfo['title']}</h1>";
   <td>Book Title</td>
   <td>Author</td>
   <td>Price</td>
+  <td></td>
 </tr>
 
 <?php
@@ -43,11 +44,12 @@ while ($row = mysqli_fetch_array($query)) {
     <td><a href='book.php?ID={$row['bookNo']}'>{$row['title']}</td>
     <td><a href='bio.php?ID={$row['authorNo']}'>{$row['authorName']}</td>
     <td>\${$row['price']}</td>
+	<td><a href='cart.php?ID={$row['bookNo']}'><h2 align='center'>Add to Cart</h2></td>
    </tr>\n";
 
 }
-
+echo"</table>";
 ?>
-</table>
+
 </body>
 </html>

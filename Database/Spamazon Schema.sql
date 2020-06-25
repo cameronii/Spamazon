@@ -41,7 +41,6 @@ create table admin
 create table cart
 	(bookNo		varchar(15), 
 	 email		varchar(255), 	 
-	 primary key (email,bookNo),
 	 foreign key (bookNo) references book(bookNo),
 	 foreign key (email) references users(email)
 	);	

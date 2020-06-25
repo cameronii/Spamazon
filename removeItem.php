@@ -11,8 +11,10 @@
     include_once('Header.php');
     include('db_key.php');
 
-    $query = mysqli_query($dbconnect, "DELETE FROM cart 
-		WHERE email='{$_SESSION['email']}' AND bookNo='".$_GET['ID']."' ")
+    $query = mysqli_query($dbconnect, " 
+		DELETE FROM cart 
+		WHERE email='{$_SESSION['email']}' AND bookNo='".$_GET['ID']."' 
+		ORDER BY bookNo LIMIT 1")
        or die (mysqli_error($dbconnect));
 	?>
 	<a href='cart.php'><strong>Item Removed! Return to cart</strong>
