@@ -42,7 +42,14 @@ while ($row = mysqli_fetch_array($query)) {
    </tr>\n";
 
 }
-echo"<tr><td colspan=3><a href='purchase.php'><h3>Purchase</h3></td>";
+$query = mysqli_query($dbconnect, "SELECT SUM(book.price) FROM cart
+INNER JOIN book ON book.bookNo=cart.bookNo
+WHERE email='{$_SESSION['email']}' ")
+       or die (mysqli_error($dbconnect));
+$result=mysqli_fetch_array($query);
+echo"<tr><td><a href='purchase.php'><h3>Purchase</h3></td>";
+echo"<td>Total</td>";
+echo"<td>{$result['SUM(book.price)']}</td>";
 }
 ?>
 
