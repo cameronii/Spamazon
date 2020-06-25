@@ -12,7 +12,7 @@
     include('db_key.php');
 
     $query = mysqli_query($dbconnect, "SELECT * FROM users
-                                            WHERE username='{$_SESSION['username']}' ")
+                                            WHERE email='{$_SESSION['email']}' ")
        or die (mysqli_error($dbconnect));
     $userInfo=mysqli_fetch_array($query);
 ?>

@@ -16,7 +16,7 @@
     
     $sql_u = "UPDATE users
     SET address = '{$address}', paymentInfo = '{$paymentInfo}'
-    WHERE username = '{$_SESSION['username']}'";
+    WHERE email = '{$_SESSION['email']}'";
     $res_u = mysqli_query($dbconnect, $sql_u);
     
     header('Location: account.php');
