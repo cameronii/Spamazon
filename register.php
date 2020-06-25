@@ -15,16 +15,13 @@ include('process_register.php');
     
 <form method="post" action="register.php" id="register_form">
     <h1>Register</h1>
-    <div <?php if (isset($name_error)): ?> class="form_error" <?php endif ?> >
-        <label style="color:black;">Username:</label>
-        <input type="text" name="username" placeholder="Username" value="<?php echo $username; ?>" required>
-        <?php if (isset($name_error)): ?>
-        <span><?php echo $name_error; ?></span>
-        <?php endif ?>
+    <div>
+        <label style="color:black;">Name:</label>
+        <input type="text" name="username" placeholder="Firstname Lastname" value="<?php echo $username; ?>" required>
     </div>
     <div <?php if (isset($email_error)): ?> class="form_error" <?php endif ?> >
         <label style="color:black;">Email:</label>
-        <input type="text" name="email" placeholder="Email" value="<?php echo $email; ?>" required>
+        <input type="text" name="email" placeholder="spam@spamazon.com" value="<?php echo $email; ?>" required>
         <?php if (isset($email_error)): ?>
         <span><?php echo $email_error; ?></span>
         <?php endif ?>
