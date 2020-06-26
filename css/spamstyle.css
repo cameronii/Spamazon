@@ -75,3 +75,16 @@ a {color:white}
 #register_form label{
     color: black;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  background-color: #000234;
+  padding: 10px;
+}
+.grid-item {
+  background-color: #2110F3;
+  border: 1px solid #000234;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
