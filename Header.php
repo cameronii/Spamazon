@@ -1,6 +1,6 @@
 <!--navbar-->
 <nav class="topnav">
-    <a href='Frontpage.php'>Home</a>
+    <a href='index.php'>Home</a>
 <?php if(isset($_SESSION['email'])){ ?>
     <a href='account.php'>Account</a>
     <a href='cart.php'>Cart</a>
