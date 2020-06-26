@@ -25,7 +25,6 @@ echo "<h1>{$authorInfo['authorName']}</h1>
 <table border="1" align="center">
 <tr>
   <td>Book Title</td>
-  <td>Author</td>
   <td>Price</td>
 </tr>
 
@@ -41,7 +40,6 @@ while ($row = mysqli_fetch_array($query)) {
   echo
    "<tr>
     <td><a href='book.php?ID={$row['bookNo']}'>{$row['title']}</td>
-    <td><a href='bio.php?ID={$row['authorNo']}'>{$row['authorName']}</td>
     <td>\${$row['price']}</td>
    </tr>\n";
 
