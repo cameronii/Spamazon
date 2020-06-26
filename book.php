@@ -26,9 +26,11 @@ echo "<h1>\${$bookInfo['price']}</h1>";
 $today=date("Y-m-d");
 if ($today>$bookInfo['publishDate']){
 	echo"<a href='cart.php?ID={$bookInfo['bookNo']}'><h2>Add to Cart</h2></a>";
+	echo"<a href='wishlist.php?ID={$bookInfo['bookNo']}'><h2>Add to Wishlist</h2></a>";
 	echo "<h4>Published on {$bookInfo['publishDate']}</h4>";
 }
 else{
+	echo"<a href='wishlist.php?ID={$bookInfo['bookNo']}'><h2>Add to Wishlist</h2></a>";
 	echo "<h4>Release date {$bookInfo['publishDate']}</h4>";
 }
 $query = mysqli_query($dbconnect, "SELECT review.blurb, review.rating FROM review 
