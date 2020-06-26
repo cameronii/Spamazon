@@ -43,7 +43,12 @@ create table cart
      foreign key (bookNo) references book(bookNo),
      foreign key (email) references users(email)
     );
-    
+ create table review
+    (bookNo        varchar(15),
+     blurb        varchar(1000),
+	 rating        int,
+     foreign key (bookNo) references book(bookNo)
+    );   
 create table wishlist
     (bookNo        varchar(15),
      email        varchar(255),
