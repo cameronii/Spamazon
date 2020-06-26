@@ -5,12 +5,14 @@
     $subject = "";
     $publishDate = "";
     $authorNo = "";
+    $ageGroup = "";
     if (isset($_POST['add_book'])) {
         $bookNo = $_POST['bookNo'];
         $title = $_POST['title'];
         $price = $_POST['price'];
         $subject = $_POST['subject'];
         $publishDate = $_POST['publishDate'];
+        $ageGroup = $_POST['ageGroup'];
         $authorNo = $_POST['authorNo'];
         
         $sql_e = "SELECT * FROM book WHERE bookNo='$bookNo'";
@@ -20,7 +22,7 @@
         $bookNo_error = "That bookNo already exists in the database";
     }else{
         $sql = "INSERT INTO book
-        VALUES ('$bookNo', '$title', '$price', '$subject', '$publishDate');";
+        VALUES ('$bookNo', '$title', '$price', '$subject', '$publishDate', '$ageGroup');";
         $sql .= "INSERT INTO wroteBy
         VALUES ('$bookNo', '$authorNo');";
 

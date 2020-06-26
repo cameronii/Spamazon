@@ -18,6 +18,8 @@
         <li><a href="delete_author.php">Delete Author</a></li>
         <li><a href="modify_user.php">Modify a User</a></li>
         <li><a href="delete_user.php">Delete a User</a></li>
+        <li><a href="add_coming_soon.php">Add to Coming Soon</a></li>
+        <li><a href="move_coming_soon.php">Move from Coming Soon to Books</a></li>
     <ul>
 
 </body>

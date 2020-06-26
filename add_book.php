@@ -34,6 +34,9 @@
         <input type="text" name="publishDate" placeholder="publishDate" value="<?php echo $publishDate; ?>" required>
     </div>
     <div>
+        <input type="text" name="ageGroup" placeholder="ageGroup" value="<?php echo $ageGroup; ?>" required>
+    </div>
+    <div>
         <input type="text" name="authorNo" placeholder="authorNo" value="<?php echo $authorNo; ?>" required>
     </div>
     <div>
