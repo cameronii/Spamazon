@@ -23,7 +23,7 @@ $query = mysqli_query($dbconnect, "SELECT book.title, book.price, book.publishDa
 										INNER JOIN author ON author.authorNo=wroteBy.authorNo
 										WHERE publishDate <'$today' AND publishDate >'$week'")
 or die (mysqli_error($dbconnect));
-
+echo"<h1>New Releases</h1>";
 echo "<div class='grid-container' border='1' align='center'>";
 while ($row = mysqli_fetch_array($query)) {
   echo
