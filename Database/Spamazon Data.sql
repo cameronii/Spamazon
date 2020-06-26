@@ -1985,7 +1985,6 @@ insert into wroteBy values ('1872','10087');
 insert into wroteBy values ('1873','10087');
 insert into wroteBy values ('1874','10016');
 insert into wroteBy values ('1875','10067');
-insert into wroteBy values ('1876','10089');
 insert into wroteBy values ('1877','10063');
 insert into wroteBy values ('1878','10051');
 insert into wroteBy values ('1879','10005');

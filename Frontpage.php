@@ -22,7 +22,7 @@ include('db_key.php');
 
 <div class='grid-container' style="grid-template-columns: auto;"border='1' align='center'>
    <div class='grid-item'>
-   <a href='search.php'>Search
+   <a href='Search.php'>Search
    </div>
    <div class='grid-item'>
    <a href='Category.php'>Categories

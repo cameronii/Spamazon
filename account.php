@@ -25,7 +25,8 @@ echo "<h1>Account Information</h1>
     <p>{$userInfo['address']}</p>
     <h2>Payment info</h2>
     <p>{$userInfo['paymentInfo']}</p>
-    <a href='account_update.php'>Update Account Information</a>";
+    <a href='account_update.php'>Update Account Information</a>
+    <a href='wishlist.php'>View Wishlist</a>";
 ?>
 
 

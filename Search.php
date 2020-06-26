@@ -12,7 +12,7 @@ include_once('Header.php');
 include('db_key.php');
 
 ?>
-<form action="search.php" method="GET">
+<form action="Search.php" method="GET">
         <input type="text" name="search" />
         <input type="submit" value="Search" />
     </form>

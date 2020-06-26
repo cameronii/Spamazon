@@ -26,7 +26,7 @@
     </div>
     <div>
         <label style="color:black;">Payment Information:</label>
-        <input type="text" name="paymentInfo" placeholder="Visa 1234 5678 9101 1121"
+        <input type="text" name="paymentInfo" placeholder="1234 5678 9101 1121"
 <?php if ($userInfo['paymentInfo'] != "n/a"): echo "value='{$userInfo['paymentInfo']}'"; endif ?> required>
     </div>
     <div>
