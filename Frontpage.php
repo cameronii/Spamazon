@@ -12,29 +12,30 @@ include_once('Header.php');
 include('db_key.php');
 
 ?>
+<div>
+<h1>Welcome to Spamazon!</h1>
+<h3>We sell books with strange nonsensical titles</h3>
+</div>
 
 
-<?php
 
-$query = mysqli_query($dbconnect, "SELECT book.title, book.price,book.bookNo,author.authorNo, author.authorName FROM book 
-										INNER JOIN wroteBy ON wroteBy.bookNo=book.bookNo
-										INNER JOIN author ON author.authorNo=wroteBy.authorNo")
-   or die (mysqli_error($dbconnect));
 
-echo "<div class='grid-container' border='1' align='center'>";
-while ($row = mysqli_fetch_array($query)) {
-  echo
-   "<div class='grid-item'>
-   <table align='center'>
-   <tr><td><a href='book.php?ID={$row['bookNo']}'>{$row['title']}</td></tr>
-   <tr><td>by</td></tr>
-   <tr><td><a href='bio.php?ID={$row['authorNo']}'>{$row['authorName']}</td></tr>
-   <tr><td>\${$row['price']}</td></tr>
-	</table>
-   </div>";
-}
+<div class='grid-container' style="grid-template-columns: auto;"border='1' align='center'>
+   <div class='grid-item'>
+   <a href='search.php'>Search
+   </div>
+   <div class='grid-item'>
+   <a href='Category.php'>Categories
+   </div>
+   <div class='grid-item'>
+   <a href='Age Groups.php'>Age Groups
+   </div>
+   <div class='grid-item'>
+   <a href='New Releases.php'>New Releases
+   </div>
+   <div class='grid-item'>
+   <a href='Coming Soon.php'>Coming Soon
+   </div>
 
-?>
-</table>
 </body>
 </html>
