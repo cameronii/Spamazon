@@ -11,8 +11,13 @@
     include_once('Header.php');
     include('db_key.php');
 	if(isset($_GET['ID'])){
-	mysqli_query($dbconnect, "INSERT into `cart` (`bookNo`, `email`) values('{$_GET['ID']}','{$_SESSION['email']}' )")
-	or die (mysqli_error($dbconnect));}
+        $sql_c = "SELECT * FROM cart WHERE email='{$_SESSION['email']}' AND bookNo='{$_GET['ID']}'";
+        $res_c = mysqli_query($dbconnect, $sql_c);
+
+    if(mysqli_num_rows($res_c) == 0){
+        mysqli_query($dbconnect, "INSERT into `cart` (`bookNo`, `email`) values('{$_GET['ID']}','{$_SESSION['email']}' )")
+        or die (mysqli_error($dbconnect));}
+    }
 	
     $query = mysqli_query($dbconnect, "SELECT book.title, cart.bookNo, book.price FROM cart
 INNER JOIN book ON book.bookNo=cart.bookNo
