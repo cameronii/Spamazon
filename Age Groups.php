@@ -13,13 +13,22 @@ include('db_key.php');
 
 ?>
 
-
 <?php
+$query = mysqli_query($dbconnect, "SELECT DISTINCT book.ageGroup FROM book")
+or die (mysqli_error($dbconnect));
+echo "<table align='center'>";
+while ($row = mysqli_fetch_array($query)) {
+  echo "<td><h3><a href='Age Groups.php?ID={$row['ageGroup']}'>{$row['ageGroup']}</h3></td>";
+}
 
+echo "</table>";
+
+if(isset($_GET['ID'])){
 $query = mysqli_query($dbconnect, "SELECT book.title, book.price,book.bookNo,author.authorNo, author.authorName FROM book 
 										INNER JOIN wroteBy ON wroteBy.bookNo=book.bookNo
-										INNER JOIN author ON author.authorNo=wroteBy.authorNo")
-   or die (mysqli_error($dbconnect));
+										INNER JOIN author ON author.authorNo=wroteBy.authorNo
+										WHERE ageGroup='{$_GET['ID']}'")
+or die (mysqli_error($dbconnect));
 
 echo "<div class='grid-container' border='1' align='center'>";
 while ($row = mysqli_fetch_array($query)) {
@@ -32,6 +41,7 @@ while ($row = mysqli_fetch_array($query)) {
    <tr><td>\${$row['price']}</td></tr>
 	</table>
    </div>";
+}
 }
 
 ?>
