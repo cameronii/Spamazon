@@ -21,7 +21,7 @@
 		WHERE email='{$_SESSION['email']}'")
        or die (mysqli_error($dbconnect));
 	?>
-	<a href='Frontpage.php'><strong>Items Purchased! Return to frontpage</strong>
+	<a href='index.php'><strong>Items Purchased! Return to frontpage</strong>
 <?php
 ?>
 <!-- Mark you said you might want to work on shopping cart, I just made a file so my link in header would go somewhere -->
